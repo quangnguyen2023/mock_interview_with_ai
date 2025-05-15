@@ -2,15 +2,14 @@ import { initializeApp, getApp, getApps } from "firebase/app"
 import { getAuth } from "firebase-admin/auth"
 import { getFirestore } from "firebase-admin/firestore"
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBeGO0IRViVX0BS1ra1N3GWvb-wk96NE7M",
-  authDomain: "prepwise-55e7a.firebaseapp.com",
-  projectId: "prepwise-55e7a",
-  storageBucket: "prepwise-55e7a.firebasestorage.app",
-  messagingSenderId: "399901525128",
-  appId: "1:399901525128:web:7b6d3c09d1073f65a78b3d",
-  measurementId: "G-DZBYCKNQ0N",
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 }
 
 const app = !getApps.length ? initializeApp(firebaseConfig) : getApp()
