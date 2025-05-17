@@ -1,10 +1,10 @@
-import React from 'react';
-import dayjs from 'dayjs';
-import Image from 'next/image';
-import { getRandomInterviewCover } from '@/lib/utils';
-import { Button } from './ui/button';
-import Link from 'next/link';
-import DisplayTechIcons from './DisplayTechIcons';
+import React from 'react'
+import dayjs from 'dayjs'
+import Image from 'next/image'
+import { getRandomInterviewCover } from '@/lib/utils'
+import { Button } from './ui/button'
+import Link from 'next/link'
+import DisplayTechIcons from './DisplayTechIcons'
 
 const InterviewCard = ({
   interviewId,
@@ -14,11 +14,11 @@ const InterviewCard = ({
   techstack,
   createdAt,
 }: InterviewCardProps) => {
-  const feedback = null as Feedback | null;
-  const normalizedType = /mix/gi.test(type) ? 'Mixed' : type;
+  const feedback = null as Feedback | null
+  const normalizedType = /mix/gi.test(type) ? 'Mixed' : type
   const formattedDate = dayjs(
     feedback?.createdAt || createdAt || Date.now()
-  ).format('MMM D, YYYY');
+  ).format('MMM D, YYYY')
 
   return (
     <div className="card-border w-[360px] max-sm:w-full min-h-96">
@@ -79,7 +79,7 @@ const InterviewCard = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default InterviewCard;
+export default InterviewCard

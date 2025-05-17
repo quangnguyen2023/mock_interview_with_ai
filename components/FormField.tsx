@@ -1,14 +1,14 @@
-import React from 'react';
-import { FormControl, FormItem, FormLabel, FormMessage } from './ui/form';
-import { Input } from './ui/input';
-import { Control, Controller, FieldValues, Path } from 'react-hook-form';
+import React from 'react'
+import { FormControl, FormItem, FormLabel, FormMessage } from './ui/form'
+import { Input } from './ui/input'
+import { Control, Controller, FieldValues, Path } from 'react-hook-form'
 
 interface FormFieldsProps<T extends FieldValues> {
-  control: Control<T>;
-  name: Path<T>;
-  label: string;
-  placeholder?: string;
-  type?: 'text' | 'email' | 'password' | 'file';
+  control: Control<T>
+  name: Path<T>
+  label: string
+  placeholder?: string
+  type?: 'text' | 'email' | 'password' | 'file'
 }
 
 const FormField = ({
@@ -37,7 +37,7 @@ const FormField = ({
         </FormItem>
       )}
     />
-  );
-};
+  )
+}
 
-export default FormField;
+export default FormField
