@@ -1,6 +1,6 @@
-import { initializeApp, getApp, getApps } from "firebase/app"
-import { getAuth } from "firebase-admin/auth"
-import { getFirestore } from "firebase-admin/firestore"
+import { initializeApp, getApp, getApps } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
